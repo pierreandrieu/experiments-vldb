@@ -1,0 +1,9 @@
+numpy==1.21.2
+PuLP==2.3
+bioconsertinc==1.0.0
+setuptools==57.0.0
+python-igraph
+biopython==1.79
+igraph==0.9.8
+corankco==2.1.1
+
