@@ -1,5 +1,5 @@
 import corankco
-
+import sys
 from corankco.dataset import Dataset
 from corankco.scoringscheme import ScoringScheme
 from corankco.algorithms.algorithmChoice import get_algorithm
@@ -58,4 +58,11 @@ r1 = [[1], [2], [3, 4]]
 r2 = [[3], [2]]
 
 print(kemeny.score_between_rankings(r1, r2))
+
+path = sys.args[1]
+print(path)
+datasets = Dataset.get_dataset_from_folder(path)
+for dataset in datasets:
+    print(dataset.name)
+	
 
