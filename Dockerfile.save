@@ -1,5 +1,6 @@
 FROM python:3.8
 
+ADD https://www.lri.fr/~andrieu/ILOG_COS_20.10_LINUX_X86_64 /tmp
 RUN adduser myuser
 USER myuser
 WORKDIR /home/myuser
@@ -21,7 +22,7 @@ RUN apt-get install -y python3-dev
 
 ARG COSDIR=/opt/CPLEX
 ARG CPX_PYVERSION=3.8
-ADD https://www.lri.fr/~andrieu/ILOG_COS_20.10_LINUX_X86_64.bin /tmp/installer
+COPY ILOG_COS_20.10_LINUX_X86_64.bin /tmp/installe
 COPY install.properties /tmp/install.properties
 RUN chmod u+x /tmp/installer
 
