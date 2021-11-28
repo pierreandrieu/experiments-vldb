@@ -5,5 +5,5 @@ setuptools==57.0.0
 python-igraph
 biopython==1.79
 igraph==0.9.8
-corankco==2.1.1
+corankco==2.1.3
 
