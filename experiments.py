@@ -240,15 +240,26 @@ def args_experiments_to_run(args: List[str]) -> Set[int]:
             for val_arg in vals_arg.split(","):
                 if val_arg.isdigit():
                     values_int.add(int(val_arg))
-                if type_arg.lower() == "exp":
+                if type_arg.lower() == "exp" or type_arg.lower() == "-exp":
                     for value_int in values_int:
                         if 1 <= value_int <= 6:
                             experiments_set.add(value_int)
-                elif type_arg.lower() == "part":
+                        else:
+                            print("Error, \"exp\" argument can onmy be associated with integers between 1 and 6")
+                            return set()
+                elif type_arg.lower() == "part" or type_arg.lower() == "-part":
                     for value_int in values_int:
                         if 1 <= value_int <= 3:
                             experiments_set.add(2 * value_int)
                             experiments_set.add(2 * value_int - 1)
+                        else:
+                            print("Error, \"part\" argument can onmy be associated with 1, 2 or 3")
+                            return set()
+                else:
+                    print("Invalid argument.")
+                    print("Try exp=i,j,... without spaces, with i,j,... in {1, ..., 6}.")
+                    print("For example, exp=3,4,6")
+                    return set()
     return experiments_set
 
 
@@ -256,8 +267,8 @@ def display_manual():
     print("Program to reproduce the 6 experiments of VLDB2022 rank aggregation paper. One argument at least is needed.")
     print("There are 6 experiments: exp=1,2,3,4,5,6")
     print("Exp 1 and 2 form the part1 (bench time computation).")
-    print("Exp 3 and 4 form the part2 (evaluation of partitioning.")
-    print("Exp 5 and 6 form the part3 (evaluation of model with goldstandards.")
+    print("Exp 3 and 4 form the part2 (evaluation of partitioning).")
+    print("Exp 5 and 6 form the part3 (evaluation of model with goldstandards).")
     print("If you want to reproduce the two experiments of part 1: then the argument is \"part=1\"")
     print("If you want to reproduce the two experiments of part 1 and 2: then the argument is \"part=1,2\"")
     print("If you want to reproduce experiments 1, 4, 6: then the argument is \"exp=1,4,6\"")
