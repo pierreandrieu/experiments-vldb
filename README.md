@@ -19,10 +19,10 @@ Example:
 will run the experiments 3, 5 and 6 of the paper (integers between 1 and 6, separated with a coma, no space)
 To reproduce all the experiments, argument is "all"
 
-A user guide is returned if no arguments are empty
+A user guide is returned if no arguments are given
 
 # remark
-Note: the experiments are run in increasing time of time computation
+Note: the experiments are run in increasing order of time computation
 
 
 
