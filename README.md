@@ -6,7 +6,8 @@ import project:
 then,  go to project
 
 build container: 
-#docker build . --tag name_of_container
+
+# docker build . --tag name_of_container
 
 run docker:
 # docker container run -it --rm name_of_container args
