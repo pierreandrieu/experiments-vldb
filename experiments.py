@@ -1,4 +1,4 @@
-from corankco.experimentsVLDB.bench import BenchPartitioningScoringScheme, BenchTime, BenchScoringScheme
+from corankco.experimentsVLDB.bench import BenchPartitioningScoringScheme, BenchTime, BenchScalabiltyScoringScheme
 from corankco.experimentsVLDB.experimentOrphanet import ExperimentOrphanet
 from corankco.experimentsVLDB.marksExperiment import MarksExperiment
 from corankco.dataset import DatasetSelector
