@@ -56,5 +56,5 @@ USER myuser
 
 COPY . .
 
-ENTRYPOINT ["python","./experiments.py"]
-# CMD [ "python3" , "experiments.py"]
+ENTRYPOINT ["python","./source/experiments.py"]
+# CMD [ "python3" , "./source/experiments.py"]
