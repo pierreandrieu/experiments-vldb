@@ -269,7 +269,9 @@ def display_manual():
     print("If you want to reproduce the two experiments of part 1 and 2: then the argument is \"part=1,2\"")
     print("If you want to reproduce experiments 1, 4, 6: then the argument is \"exp=1,4,6\"")
     print("You can combine arguments: exp=1,3 part=3 runs experiments 1, 3, 5 and 6.")
-    print("If you want to reproduce all the experiments, then the argument is \"all\"")
+    print("If you want to reproduce all the experiments, then the argument is \"--all\"")
+    print("--raw_data to also print the raw data and the parameters of the experiment")
+    print("--figures to display the figures")
 
 
 if len(sys.argv) == 1:
